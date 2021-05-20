@@ -16,7 +16,7 @@ int main()
 		}
 
 		window.clear();
-		//cvijet.draw();
+		
 		window.display();
 	}
 
