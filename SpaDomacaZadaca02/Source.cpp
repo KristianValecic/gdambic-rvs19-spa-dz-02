@@ -1,10 +1,15 @@
 #include <SFML/Graphics.hpp>
+#include "game_of_life.h"
 
 int main()
 {
-	sf::RenderWindow window(sf::VideoMode(800, 600), "Hello, SFML world!");
+	const int width = 50;
+	const int height = 20;
+
+	sf::RenderWindow window(sf::VideoMode(width, height), "Game of Life");
 	window.setFramerateLimit(60);
-	//Cvijet cvijet(&window);
+	
+	game_of_life game;
 
 	while (window.isOpen())
 	{
@@ -16,7 +21,10 @@ int main()
 		}
 
 		window.clear();
-		
+
+		game.iscrtaj();
+		game.sljedeca_generacija();
+
 		window.display();
 	}
 
